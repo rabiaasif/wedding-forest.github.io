@@ -1,330 +1,196 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rouge+Script&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <style>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
-    html, body {
-        height: 100%;
-        margin: 0;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
+  <style>
     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-        font-family: Arial, sans-serif;
-        background-color: #f9f9f9;
-        background-image: url("./images/bg.png");
-        background-size: 150px;
-        color: #333;
-        min-height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+      font-family: "Quicksand", sans-serif;
+      background-color: #f9f9f9;
+      background-image: url("./images/bg.png");
+      background-size: 150px;
+      color: white;
     }
 
+    /* ---------- HERO ---------- */
     header {
-        /* background-image: url(''); */
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        min-height: 100vh;
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: white;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    h1, h2 {
-        margin: 0;
-        font-family: "Rouge Script", cursive;
-        font-weight: 600;
-        font-style: normal;
-        font-size: xx-large;
-    }
-
-    h2, p, a {
-        color: white;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    p, a {
-        font-family: "Quicksand", sans-serif;
-        font-weight: 600;
-        font-style: normal;
-        margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
     }
 
     nav {
-        margin: 20px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
     }
 
     nav a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.2rem;
-        margin: 0 15px;
-        padding: 10px;
-        border-radius: 5px;
-        background: rgba(0, 0, 0, 0.3);
-        transition: background 0.3s ease-in-out;
+      text-decoration: none;
+      color: white;
+      background: rgba(0,0,0,0.3);
+      padding: 10px 15px;
+      border-radius: 6px;
     }
 
-    nav a:hover {
-        background: rgba(0, 0, 0, 0.6);
+    h2 {
+      font-family: "Rouge Script", cursive;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,.5);
     }
 
+    p {
+      max-width: 600px;
+      margin: auto;
+      text-shadow: 2px 2px 10px rgba(0,0,0,.5);
+    }
+
+    /* ---------- SECTIONS ---------- */
     section {
-        padding: 20px;
-        min-height: 100vh;
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin-bottom: 40px;
+      padding: 60px 20px;
+      text-align: center;
     }
 
+    .section-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .card {
+      background: rgba(178,172,136,.35);
+      padding: 25px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 520px;
+    }
+
+    .card:hover {
+      background: rgba(136,178,138,.35);
+    }
+
+    /* ---------- PHOTOS ---------- */
+    .photo-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+    }
+
+    /* ---------- CONTACT ---------- */
+    .contact-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 25px;
+      background-color: #78a58b;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+
+    /* ---------- FOOTER ---------- */
     footer {
-        text-align: center;
-        padding: 20px;
-        background-color: rgba(110, 121, 67, 0.5);
-        margin-top: auto;
+      padding: 20px;
+      text-align: center;
+      background: rgba(110,121,67,.5);
     }
-
-    .photo-row {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: wrap;
-        padding: 20px;
-    }
-
-    .photo-row img {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-
-    #services-section {
-        height: 100vh;
-        display: block;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-
-    #countdown {
-        font-size: 3rem;
-        font-weight: bold;
-        font-family: "Quicksand", sans-serif;
-        text-align: center;
-        color: white;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    .details-style {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        padding: 180px 20px 20px;
-    }
-
-    .details-style div {
-        width: 80%;
-        padding: 20px;
-        margin: 10px 0;
-        text-align: center;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(178, 172, 136, 0.3);
-    }
-
-    .details-style div:hover {
-        background-color: rgba(136, 178, 138, 0.3);
-    }
-
-    .details-style div.tapped {
-        background-color: rgba(178, 172, 136, 0.3) !important;
-    }
-
-    table {
-        margin: auto;
-        border-collapse: collapse;
-    }
-
-    th, td {
-        padding: 10px;
-        text-align: center;
-        border: 1px solid #ddd;
-    }
-
-    </style>
+  </style>
 </head>
+
 <body>
-<div style="display: block; padding: 20px; margin-bottom: 20px;">
+
 <header>
-    
-    <!-- <h1>Shane & Rabia are getting married!</h1> -->
-    <nav style="
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 10px; 
-    padding: 10px;">
-    
-
-    
-<div style="text-align: center;">
-  <img src="./images/1.png" alt="Wedding Forest" style="max-width: 50%; height: auto;" />
-</div>
-    <a href="#services-section" style="color: white; text-decoration: none; padding: 10px;">Services</a>
-    <a href="#details" style="color: white; text-decoration: none; padding: 10px;">Photos</a>
-    <a href="#rsvp" style="color: white; text-decoration: none; padding: 10px;">Contact Us</a>
-
-</nav>
+  <img src="./images/1.png" alt="Wedding Forest" style="max-width: 60%; height: auto;" />
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#photos">Photos</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
-</div>
 
-<div style="display: block; padding: 20px; margin-bottom: 20px;">
-<div id="services-section">
-<section id="services-section" class="details-style">
-    
-    <div>
-        <h2>Floral Design</h2>
-        <p>Bring your wedding vision to life with bespoke floral arrangements. From delicate bouquets to stunning table centerpieces, we craft designs that perfectly match your style and theme.</p>
+<section id="services">
+  <div class="section-inner">
+    <div class="card">
+      <h2>Floral Design</h2>
+      <p>Bespoke floral arrangements crafted to bring your wedding vision to life.</p>
     </div>
 
-    <div>
-        <h2>Faux Floral Arch</h2>
-        <p>Our versatile wedding arches are available for rent and can be customized to complement your ceremony space. Perfect for boho, whimsical, or classic setups, we handle delivery and styling to make your day picture-perfect.</p>
+    <div class="card">
+      <h2>Faux Floral Arch</h2>
+      <p>Customizable arches perfect for boho, whimsical, or classic ceremonies.</p>
     </div>
 
-    <div>
-        <h2>Wedding Coordination</h2>
-        <p>Whether you need full planning or day-of support, our coordination service ensures a seamless and stress-free celebration. We manage timelines, vendors, and details so you can enjoy every moment of your special day.</p>
+    <div class="card">
+      <h2>Wedding Coordination</h2>
+      <p>Seamless planning and day-of coordination so you can relax and enjoy.</p>
     </div>
 
-    <div>
-        <h2>Customized Artwork</h2>
-        <p>Add a touch of magic to your celebration with one-of-a-kind, hand-painted stained glass creations. From personalized signs and card boxes to table numbers and decorative accents, each piece is thoughtfully crafted to reflect your love story and bring enchanting details to every corner of your wedding..</p>
+    <div class="card">
+      <h2>Customized Artwork</h2>
+      <p>Hand-painted stained glass signs, card boxes, and table details.</p>
     </div>
 
-    <div>
-        <h2>Wedding Website</h2>
-        <p>Keep your guests enchanted and informed with a beautifully designed wedding website. Share your love story, event details, RSVP options, calendar links, easy-to-navigate site that reflects your unique style and sets the tone for your celebration.</p>
+    <div class="card">
+      <h2>Wedding Website</h2>
+      <p>Beautiful, personalized websites for RSVPs, schedules, and love stories.</p>
     </div>
 
-    <div>
-        <h2>About Us</h2>
-        <p>
-        As a family-run business, we pour our hearts into every wedding we touch. Working with us means you’ll receive personal attention, thoughtful design, and seamless coordination—no corporate middlemen, no impersonal processes, just a team that treats your day as if it were our own.
-        </p>
+    <div class="card">
+      <h2>About Us</h2>
+      <p>We’re a family-run business offering thoughtful, hands-on service with heart.</p>
     </div>
-    
-</section>
-</div>
-
-</div>
-
-<div style="display: block; padding: 20px; margin-bottom: 20px;">
-
-<section id="details" class="details-style">
-
-       <div style="text-align: center;">
-            <img src="./images/2.jpg" alt="Wedding Forest" style="max-width: 30%; height: auto;" />
-
-    </div>
-           <div style="text-align: center;">
-            <img src="./images/3.jpg" alt="Wedding Forest" style="max-width: 30%; height: auto;" />
-
-    </div>
-           <div style="text-align: center;">
-            <img src="./images/4.jpg" alt="Wedding Forest" style="max-width: 30%; height: auto;" />
-
-    </div>
-
-               <div style="text-align: center;">
-            <img src="./images/5.jpg" alt="Wedding Forest" style="max-width: 30%; height: auto;" />
-
-    </div>
-
-    
-
-               <div style="text-align: center;">
-            <img src="./images/6.png" alt="Wedding Forest" style="max-width: 40%; height: auto;" />
-
-    </div>
-              
-    
-
- 
+  </div>
 </section>
 
-</div>
-
-
-
-
-
-<div style="display: block; padding: 20px; margin-bottom: 20px;">
-<section id="rsvp" class="details-style">
-  
-
-    <div>
-        <h2>Contact</h2>
-
-        <p>Have questions or want a quote tailored to your wedding? We’d love to help! Reach out and let’s create something magical together.</p>
-      <p></p>
-        <a href="mailto:rabia.asif@alumni.utoronto.ca" 
-        style="display: inline-block; padding: 15px 25px; background-color: #78a58b;
-               color: white; text-decoration: none; font-size: 18px; font-weight: bold;
-               border-radius: 10px; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-               transition: background-color 0.3s ease, transform 0.2s ease;"
-        onmouseover="this.style.backgroundColor='#365944'; this.style.transform='scale(1.05)'"
-        onmouseout="this.style.backgroundColor='#78a58b'; this.style.transform='scale(1)'"
-        ontouchstart="this.style.backgroundColor='#365944'; this.style.transform='scale(1.05)'"
-        ontouchend="setTimeout(() => { this.style.backgroundColor='#78a58b'; this.style.transform='scale(1)'; }, 200)">
-         📩 Email Us
-     </a>
-
-    </div>
-
-
-  
+<section id="photos">
+  <div class="photo-grid">
+    <img src="./images/2.jpg">
+    <img src="./images/3.jpg">
+    <img src="./images/4.jpg">
+    <img src="./images/5.jpg">
+    <img src="./images/6.png">
+  </div>
 </section>
-</div>
+
+<section id="contact">
+  <div class="section-inner">
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Have questions or want a custom quote? Let’s create something magical.</p>
+      <a class="contact-btn" href="mailto:rabia.asif@alumni.utoronto.ca">📩 Email Us</a>
+    </div>
+  </div>
+</section>
 
 <footer>
-    <p>&copy; 2026 WF All rights reserved.</p>
+  <p>&copy; 2026 Wedding Forest</p>
 </footer>
 
 </body>
